@@ -8,7 +8,7 @@ const siameseCost = 3000;
 const siberianCost = 10000;
 const mineCoonCost = 100000;
 let scorePerSecond = 0;
-let score = 1;
+let score = 0;
 let scoreFixed = 0;
 
 const reload = () => {
