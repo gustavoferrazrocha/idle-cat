@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  font-family: 'Fira Code', monospace;
+  background-color: #000;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: unset;
+}
+/*# sourceMappingURL=reset.css.map */

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <script defer src="/scripts/index.js"></script>
+    <title>Idle Cat</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__painel">
+            <h1 class="header__furball">Furball: 0</h1>
+            <h2 class="header__fps">FPS: 0</h2>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main__painel">
+            <div class="main__cat">
+                <img src="/assets/images/canadense.png" alt="cat" class="main__image">
+            </div>
+        </div>
+        <h1 class="main__level">Multiply Level: 1x</h1>
+    </div>
+    <section class="shop">
+        <h1 class="shop__title">Shop</h1>
+        <div class="shop__painel">
+            <div class="shop__item">
+                <h1 class="shop__name">Black Cat</h1>
+                <h2 class="shop__price">Price: $666</h2>
+                <button onclick="blackCat()" class="shop__button">Buy</button>
+            </div>
+            <div class="shop__item">
+                <h1 class="shop__name">Siamese Cat</h1>
+                <h2 class="shop__price">Price: $3000</h2>
+                <button onclick="siameseCat()" class="shop__button">Buy</button>
+            </div>
+            <div class="shop__item">
+                <h1 class="shop__name">Siberian Cat</h1>
+                <h2 class="shop__price">Price: $10000</h2>
+                <button onclick="siberianCat()" class="shop__button">Buy</button>
+            </div>
+            <div class="shop__item">
+                <h1 class="shop__name">Mine Coon Cat</h1>
+                <h2 class="shop__price">Price: $100000</h2>
+                <button onclick="mineCoon()" class="shop__button">Buy</button>
+            </div>
+    </section>
+    <footer>
+        <div class="furButton">
+            <button class="furButton__button">Collect</button>
+        </div>
+    </footer>
+</body>
+</html>
