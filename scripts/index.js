@@ -1,63 +1,39 @@
-const furBall = document.querySelector('.header__furball');
-const click = document.querySelector('.furButton__button');
-const furballPerSecond = document.querySelector('.header__fps');
-const multiplyText = document.querySelector('.main__level');
-let multiply = 1;
-const blackCatCost = 666;
-const siameseCost = 3000;
-const siberianCost = 10000;
-const mineCoonCost = 100000;
-let scorePerSecond = 0;
-let score = 0;
-let scoreFixed = 0;
+const $furBall = document.querySelector('.header__furball');
+const $furballPerSecond = document.querySelector('.header__fps');
+const $multiplyText = document.querySelector('.main__level');
+const $collectButton = document.querySelector('.furButton__button');
 
-const reload = () => {
-  furBall.innerHTML = 'Furball: ' + scoreFixed;
-  furballPerSecond.innerHTML = 'FPS: ' + scorePerSecond;
-  multiplyText.innerHTML = 'Multiplier: ' + multiply + 'x';
+let multiply = 1;
+let score = 0;
+let scorePerSecond = 0;
+
+function reload() {
+  $furBall.textContent = 'Furball: ' + score;
+  $furballPerSecond.textContent = 'FPS: ' + scorePerSecond;
+  $multiplyText.textContent = 'Multiply Level: ' + multiply + 'x';
 };
 
-click.addEventListener('click', () => {
-  score = score + 1 * multiply;
-  scoreFixed = score.toFixed(1);
-  reload();
-});
-
-function blackCat() {
-    if (validateBuy(blackCatCost)) {
-        multiply++
-        reload();
-    }
+function getMultiply(value){
+    multiply += value;
+    return multiply;
 }
 
-function siameseCat() {
-    if (validateBuy(siameseCost)) {
-        multiply = multiply + 3
-        reload();
-    }
-}
+$collectButton.addEventListener('click', () => {
+    incrementScore();
+})
 
-function siberianCat() {
-    if (validateBuy(siberianCost)) {
-        multiply = multiply + 10
-        reload();
-    }
-}
-
-function mineCoon() {
-    if (validateBuy(mineCoonCost)) {
-        multiply = multiply + 100
-        reload();
-    }
+function incrementScore() {
+    score += 1 * multiply;
+    reload();
 }
 
 function validateBuy(price) {
     if(score >= price) {
     score = score - price;
-    scoreFixed = score.toFixed(1);
     reload();
     return true;
   }
 }
 
-reload();
+
+export { validateBuy, reload, getMultiply };
