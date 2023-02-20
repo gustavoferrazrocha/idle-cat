@@ -1,5 +1,6 @@
 .game{
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   justify-content: space-evenly;
 }
@@ -9,16 +10,15 @@
   flex-direction: column;
   align-items: center;
   margin-top: 1rem;
+  flex-basis: 50%;
+  flex-grow: 1;
+  border-right: solid;
 }
 
 .header__fps {
   text-align: center;
 }
 
-.divisior{
-  width: 0.1px;
-  background-color: white;
-}
 
 .main {
   display: flex;
@@ -60,6 +60,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-basis: 50%;
+  flex-grow: 1;
   gap: 50px;
 }
 
@@ -120,4 +122,9 @@
 .upgrade__title{
   text-align: center;
   margin: 10px;
+}
+
+footer{
+  width: 100%;
+  border: solid;
 }
