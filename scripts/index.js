@@ -13,8 +13,9 @@ function reload() {
   $multiplyText.textContent = 'Multiply Level: ' + multiply + 'x';
 };
 
-function getMultiply(value){
+function updateMultiply(value){
     multiply += value;
+    reload();
     return multiply;
 }
 
@@ -36,4 +37,4 @@ function validateBuy(price) {
 }
 
 
-export { validateBuy, reload, getMultiply };
+export { validateBuy, reload, updateMultiply };

@@ -1,4 +1,4 @@
-import { validateBuy, reload, getMultiply } from "./index.js";
+import { validateBuy, reload, updateMultiply } from "./index.js";
 
 const shopPainel = document.querySelector('.shop__painel');
 
@@ -77,7 +77,7 @@ function updateShop(){
 
 function buyCat(catData){
   if(validateBuy(catData.price)){
-    getMultiply(catData.multiplier);
+    updateMultiply(catData.multiplier);
     catData.quantity += 1;
     reload();
     updateShop()
