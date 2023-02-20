@@ -69,7 +69,7 @@ function createShopItem() {
 
 function updateShop(){
   for(const cat in cats){
-    const catQuantity = document.querySelector(`#${cat} .shop__quantity`);
+    const catQuantity = document.querySelector(`#${cat}`);
     catQuantity.textContent = `Quantity: ${cats[cat].quantity}`
   }
 }
