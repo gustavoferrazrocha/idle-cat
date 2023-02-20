@@ -1,3 +1,8 @@
+.game{
+  display: flex;
+  justify-content: space-between;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5,7 +10,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px 0;
 }
 
 .header__fps {
@@ -50,14 +54,18 @@
 }
 
 .shop {
+  width: 500px;
+  height: 400px;
   margin: 10px;
   border: 1px solid;
+  overflow: auto;
 }
 
 .shop__painel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -74,8 +82,27 @@
 }
 
 .shop__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
   margin: 10px;
+  border: solid;
   font-size: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+
+.shop__item:active{
+  transform: scale(0.9);
+}
+
+.shop__info{
+  font-size: 16px;
+}
+
+.shop__quantity{
+  font-size: 50px;
 }
 
 .furButton {
