@@ -1,6 +1,7 @@
 .game{
   display: flex;
-  justify-content: space-between;
+  height: 100%;
+  justify-content: space-evenly;
 }
 
 .header {
@@ -14,6 +15,11 @@
 
 .header__fps {
   text-align: center;
+}
+
+.divisior{
+  width: 0.1px;
+  background-color: white;
 }
 
 .main {
