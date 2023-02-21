@@ -1,4 +1,4 @@
-import { validateBuy, reload } from "./index.js";
+import { validateBuy } from "./index.js";
 
 const $upgradePainel = document.querySelector('.upgrade__painel');
 const $upgradeUnlock = document.querySelector('.upgrade__unlock');
