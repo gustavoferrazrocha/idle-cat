@@ -4,13 +4,13 @@ const $multiplyText = document.querySelector('.main__level');
 const $collectButton = document.querySelector('.furButton__button');
 
 let multiply = 1;
-let score = 0;
+let score = 0.0;
 let scorePerSecond = 0;
 
 function reload() {
-  $furBall.textContent = 'Furball: ' + score;
+  $furBall.textContent = 'Furball: ' + score.toFixed(1);
   $furballPerSecond.textContent = 'FPS: ' + scorePerSecond;
-  $multiplyText.textContent = 'Multiply Level: ' + multiply + 'x';
+  $multiplyText.textContent = 'Multiply Level: ' + multiply.toFixed(2) + 'x';
 };
 
 function updateMultiply(value){
@@ -36,5 +36,6 @@ function validateBuy(price) {
   }
 }
 
+reload();
 
 export { validateBuy, reload, updateMultiply };
