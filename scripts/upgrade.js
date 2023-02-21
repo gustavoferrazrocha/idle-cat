@@ -81,14 +81,12 @@ function createModal(upgradeData){
     closeModal(modal);
   })
 
-
   $upgradePainel.appendChild(modal);
 
 }
 
 
 function closeModal(modal){
-  console.log(modal);
   modal.remove();
 }
 

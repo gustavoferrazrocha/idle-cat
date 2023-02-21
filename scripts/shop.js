@@ -5,8 +5,8 @@ const shopPainel = document.querySelector('.shop__painel');
 const cats = {
   blackCat: {
     name: "Black Cat",
-    price: 2,
-    multiplier: 1,
+    price: 20,
+    multiplier: 0.01,
     quantity: 0
   },
   siameseCat: {
