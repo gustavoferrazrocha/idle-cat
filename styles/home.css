@@ -137,6 +137,43 @@
   border-radius: 4px;
 }
 
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__window{
+  width: 600px;
+  height: 600px;
+  background: white;
+}
+
+.modal__header{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.modal__title{
+  color: black;
+  margin-left: auto;
+}
+
+.modal__close{
+  background: transparent;
+  font-size: 3rem;
+  margin: 0 10px 0 auto;
+}
+
 footer{
   width: 100%;
   border: solid;
