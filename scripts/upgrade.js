@@ -4,7 +4,7 @@ const $upgradePainel = document.querySelector('.upgrade__painel');
 const $upgradeUnlock = document.querySelector('.upgrade__unlock');
 const $upgradeUnlockButton = document.querySelector('.upgrade__unlockButton');
 
-const unlockPrice = 10;
+const unlockPrice = 1000;
 let wasUnlocked = false;
 
 const upgrades = {
@@ -49,14 +49,14 @@ function createUpgrade(){
     upgradeItem.appendChild(upgradeName);
 
     upgradeItem.addEventListener('click', () => {
-      openModal(upgradeData);
+      createModal(upgradeData);
     })
 
     $upgradePainel.appendChild(upgradeItem);
   }
 }
 
-function openModal(upgradeData){
+function createModal(upgradeData){
   const modal = document.createElement('div');
   modal.classList.add('modal');
 

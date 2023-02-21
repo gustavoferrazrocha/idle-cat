@@ -119,6 +119,22 @@
   overflow: auto;
 }
 
+.upgrade__item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  border: solid;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in;
+}
+
+.upgrade__item:active{
+  transform: scale(0.9);
+}
+
 .upgrade__title{
   text-align: center;
   margin: 10px;
