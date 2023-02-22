@@ -83,6 +83,8 @@ function createCatCareItem(){
 function buyCarer(catCarerData){
   if(validateBuy(catCarerData.price)){
     setProgressBar(catCarerData, 1)
+    catCarerData.quantity += 1;
+    updateCarer();
   }
 }
 
@@ -110,9 +112,7 @@ function checkProgress(data){
   if(data.progressWidth === 100){
     progressBar.style.width = 0;
     data.progressWidth = 0;
-    data.quantity++;
     incrementScore(data.invoice);
-    updateCarer();
   }
 }
 
