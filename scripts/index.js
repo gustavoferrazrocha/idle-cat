@@ -20,11 +20,11 @@ function updateMultiply(value){
 }
 
 $collectButton.addEventListener('click', () => {
-    incrementScore();
+    incrementScore(1);
 })
 
-function incrementScore() {
-    score += 1 * multiply;
+function incrementScore(incrementValue) {
+    score += incrementValue * multiply;
     reload();
 }
 
@@ -38,4 +38,4 @@ function validateBuy(price) {
 
 reload();
 
-export { validateBuy, reload, updateMultiply };
+export { validateBuy, reload, updateMultiply, incrementScore };

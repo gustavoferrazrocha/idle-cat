@@ -1,4 +1,4 @@
-import { validateBuy } from "./index.js";
+import { validateBuy, incrementScore } from "./index.js";
 
 const $catCarerPainel = document.querySelector('.catCarer__painel')
 
@@ -69,6 +69,7 @@ function createCatCareItem(){
     const catCarerQuantity = document.createElement('h1');
     catCarerQuantity.classList.add('catCarer__quantity');
     catCarerQuantity.textContent = catCarerData.quantity;
+    catCarerQuantity.setAttribute("id", catCarer + '_quantity');
     catCarerItem.appendChild(catCarerQuantity);
 
     catCarerItem.addEventListener('click', () => {
@@ -80,7 +81,9 @@ function createCatCareItem(){
 }
 
 function buyCarer(catCarerData){
-  setProgressBar(catCarerData, 1)
+  if(validateBuy(catCarerData.price)){
+    setProgressBar(catCarerData, 1)
+  }
 }
 
 function setProgressBar(catCarerData, percent){
@@ -108,7 +111,14 @@ function checkProgress(data){
     progressBar.style.width = 0;
     data.progressWidth = 0;
     data.quantity++;
-    console.log('entrou ', data.quantity)
+    incrementScore(data.invoice);
+    updateCarer();
   }
+}
 
+function updateCarer(){
+  for(const catCarer in catCaretakers){
+    const catCarerQuantity = document.querySelector(`#${catCarer}_quantity`);
+    catCarerQuantity.textContent = `${catCaretakers[catCarer].quantity}`
+  }
 }
