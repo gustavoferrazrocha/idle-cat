@@ -73,6 +73,25 @@ function createModal(upgradeData){
   modal__title.textContent = upgradeData.name;
   modal__header.appendChild(modal__title);
 
+  const modal__content = document.createElement('div');
+  modal__content.classList.add('modal__content');
+  modal__window.appendChild(modal__content);
+
+  const modal__description = document.createElement('p');
+  modal__description.classList.add('modal__description');
+  modal__description.textContent = upgradeData.description;
+  modal__content.appendChild(modal__description);
+
+  const modal__footer = document.createElement('div');
+  modal__footer.classList.add('modal__footer');
+  modal__window.appendChild(modal__footer);
+
+  const modal__button = document.createElement('button');
+  modal__button.classList.add('modal__button');
+  modal__button.textContent = 'BUY';
+  modal__footer.appendChild(modal__button);
+
+
   const modal__close = document.createElement('button');
   modal__close.classList.add('modal__close');
   modal__close.textContent = 'X';

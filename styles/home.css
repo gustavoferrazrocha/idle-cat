@@ -165,24 +165,49 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 .modal__window{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 600px;
   height: 600px;
   background: white;
+  color: black;
 }
 
 .modal__header{
   display: flex;
-  justify-content: center;
   margin-top: 1rem;
   align-items: center;
+  width: 100%;
+}
+
+.modal__button{
+  font-size: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.modal__button:hover{
+  background-color: green;
+  color: white;
 }
 
 .modal__title{
-  color: black;
   margin-left: auto;
+}
+
+.modal__description{
+  padding: 1rem;
+  text-align: center;
+}
+
+.modal__content{
+  display: flex;
+  justify-content: center;
 }
 
 .modal__close{
