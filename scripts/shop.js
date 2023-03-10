@@ -5,28 +5,28 @@ const shopPainel = document.querySelector('.shop__painel');
 const cats = {
   blackCat: {
     name: "Black Cat",
-    price: 20,
+    price: 10,
     multiplier: 0.01,
     quantity: 0
   },
   siameseCat: {
     name: "Siamese Cat",
-    price: 3,
-    multiplier: 3,
+    price: 100,
+    multiplier: 0.1,
     quantity: 0
     
   },
   siberianCat: {
     name: "Siberian Cat",
-    price: 4,
-    multiplier: 10,
+    price: 1000,
+    multiplier: 1,
     quantity: 0
     
   },
   mineCoonCat: {
     name: "Mine Coon Cat",
-    price: 5,
-    multiplier: 100,
+    price: 10000,
+    multiplier: 10,
     quantity: 0
   }
 };
